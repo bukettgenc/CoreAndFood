@@ -7,8 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoreAndFood.Data.Models;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 
 namespace CoreAndFood
 {
@@ -19,6 +20,8 @@ namespace CoreAndFood
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddAuthentication(
+                CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x => x.LoginPath = "/Login/Index");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,7 +36,10 @@ namespace CoreAndFood
             //{
             //    await context.Response.WriteAsync("Hello World!");
             //});
+            app.UseAuthentication();
+            app.UseStaticFiles();
             app.UseRouting();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");

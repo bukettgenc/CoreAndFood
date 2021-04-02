@@ -18,6 +18,26 @@ namespace CoreAndFood.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("CoreAndFood.Data.Models.Admin", b =>
+                {
+                    b.Property<int>("adminId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AdminRole")
+                        .HasMaxLength(1);
+
+                    b.Property<string>("password")
+                        .HasMaxLength(20);
+
+                    b.Property<string>("userName")
+                        .HasMaxLength(20);
+
+                    b.HasKey("adminId");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("CoreAndFood.Data.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")

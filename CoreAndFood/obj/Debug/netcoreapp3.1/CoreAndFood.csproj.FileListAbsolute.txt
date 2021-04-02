@@ -123,3 +123,12 @@ C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor
 C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Food\AddFood.cshtml.g.cs
 C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Category\GetCategory.cshtml.g.cs
 C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Food\GetFood.cshtml.g.cs
+C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\bin\Debug\netcoreapp3.1\X.PagedList.dll
+C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\bin\Debug\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\bin\Debug\netcoreapp3.1\X.PagedList.Web.Common.dll
+C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\CoreAndFood.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index.cshtml.g.cs
+C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index2.cshtml.g.cs
+C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SiteLayout.cshtml.g.cs
+C:\Users\GENC\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Default\Index.cshtml.g.cs

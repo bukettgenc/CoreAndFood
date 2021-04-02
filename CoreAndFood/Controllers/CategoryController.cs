@@ -5,17 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using CoreAndFood.Data.Models;
 using CoreAndFood.Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CoreAndFood.Controllers
 {
     public class CategoryController : Controller
     {
         CategoryRepository categoryRepository = new CategoryRepository();
-
+       [Authorize]
         public IActionResult Index()
         {
             return View(categoryRepository.tList());
         }
+    
         public IActionResult AddCategory()
         {
             return View();

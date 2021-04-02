@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CoreAndFood.Repositories;
 using CoreAndFood.Data.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using X.PagedList;
 
 namespace CoreAndFood.Controllers
 {
@@ -14,10 +15,10 @@ namespace CoreAndFood.Controllers
         Context db = new Context();
 
         FoodRepository foodRepository = new FoodRepository();
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
             FoodRepository foodRepository = new FoodRepository();
-            return View(foodRepository.tList("Category"));
+            return View(foodRepository.tList("Category").ToPagedList(page,3));
         }
         public IActionResult AddFood()
         {
@@ -45,14 +46,15 @@ namespace CoreAndFood.Controllers
         {
             var x = foodRepository.TGet(id);
             List<SelectListItem> values = (from y in db.Categories.ToList()
-                select new SelectListItem
-                {
-                    Text = y.CategoryName,
-                    Value = y.CategoryId.ToString()
-                }).ToList();
+                                           select new SelectListItem
+                                           {
+                                               Text = y.CategoryName,
+                                               Value = y.CategoryId.ToString()
+                                           }).ToList();
             ViewBag.values = values;
             Food food = new Food()
             {
+                FoodId = @x.FoodId,
                 CategoryId = @x.CategoryId,
                 Name = @x.Name,
                 Price = @x.Price,
@@ -68,6 +70,7 @@ namespace CoreAndFood.Controllers
         public IActionResult FoodUpdate(Food f)
         {
             var x = foodRepository.TGet(f.FoodId);
+            x.FoodId = f.FoodId;
             x.Name = f.Name;
             x.Stock = f.Stock;
             x.Price = f.Price;
