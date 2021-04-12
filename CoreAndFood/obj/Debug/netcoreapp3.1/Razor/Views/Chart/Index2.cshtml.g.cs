@@ -50,7 +50,7 @@ namespace AspNetCore
             WriteLiteral("\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
             EndContext();
             BeginContext(127, 1772, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eccd913cbf314b60ab0bb6aae209fa2e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bfc3683261b84166ad55009fdc8c46c2", async() => {
                 BeginContext(133, 525, true);
                 WriteLiteral(@"
     <title>Result Visualization</title>
@@ -122,7 +122,7 @@ namespace AspNetCore
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(1901, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee71509fbcc94b768f15c4bb43bbd48b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d6bc07b66e7c4dcba7cdf9db44b8686b", async() => {
                 BeginContext(1907, 36, true);
                 WriteLiteral("\r\n<div id=\"ColumnChart_div\"></div>\r\n");
                 EndContext();
